@@ -1,3 +1,5 @@
+# Completed on 5/15/2025
+
 small = int(input())
 medium = int(input())
 large = int(input())

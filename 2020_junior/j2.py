@@ -1,3 +1,5 @@
+# Completed on 5/15/2025
+
 goal = int(input())
 infected = int(input())
 spread = int(input())
