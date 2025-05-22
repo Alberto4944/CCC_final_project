@@ -6,7 +6,9 @@ for i in instructions:
     if int(i) == int:
         turns = int(i)
         print(f"{strings} {adjustment} {turns}")
-    if i == "-" or i == "+":
-        adjustment = i
+    elif i == "-":
+        adjustment = "loosen"
+    elif i == "+":
+        adjustment = "tighten"
     else:
         strings = strings + i
