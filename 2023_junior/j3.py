@@ -1,28 +1,15 @@
+# Almost completed on 5/29/2025, but not finished if they are equal and CCC grader is down until 5/30
+
 people = int(input())
-day1 = 0
-day2 = 0
-day3 = 0
-day4 = 0
-day5 = 0
+avaliablility = [0, 0, 0, 0, 0]
+highest = 0
 
-for i in range(people):
-    avaliablility = input()
-    
-    for a in avaliablility:
-        if a == "Y":
-            if a == avaliablility[0]:
-                day1+=1
-            elif a == avaliablility[1]:
-                day2+=1
-            elif a == avaliablility[2]:
-                day3+=1
-            elif a == avaliablility[3]:
-                day4+=1
-            else:
-                day5+=1
-
-most = day1
-for value in [day1, day2, day3, day4, day5]:
-    if value > most:
-        most = value
-        print(most)
+for person in range(people):
+    avaliable = input()
+    for i in range(4):
+        if avaliable[i] == "Y":
+            avaliablility[i]+=1
+        if avaliablility[i] > highest:
+            highest = i + 1  
+            
+print(highest)
