@@ -1,18 +1,21 @@
+# Completed on 6/2/2025 and tested with two cases. CCC Grader is still down.
+
 text = input()
 happy = 0
 sad = 0
 
-for char in text:
-    if char == ")":
-        happy+=1
-    elif char == "(":
-        sad+=1
+for index in range(len(text)):
+    if text[index] == ":" and text[index+1] == "-":
+        if text[index+2] == ")":
+            happy+=1
+        elif text[index+2] == "(":
+            sad+=1
         
 if happy > sad:
     print("happy")
 elif sad > happy:
     print("sad")
-elif happy == sad:
+elif happy == sad and happy > 0 and sad > 0:
     print("unsure")
 else:
     print("none")
