@@ -15,4 +15,4 @@ for char in range(len(instructions)):
         times = ""
     else:
         strings+=char
-        
+                     
