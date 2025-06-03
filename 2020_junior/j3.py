@@ -1,9 +1,18 @@
+# Completed on 6/3/2025
+
+x = []
+y = []
+
 drops = int(input())
-largest_x = 0
-largest_y = 0
 
-smallest_x = 0
-smallest_y = 0
+for drop in range(drops):
+    coords = input()
+    for char in range(len(coords)):
+        if coords[char] == ",":
+            x.append(int(coords[:char]))
+            y.append(int(coords[char+1:]))
+x.sort()
+y.sort()
 
-for i in range(drops):
-    coord = input()
+print(f"{x[0]-1},{y[0]-1}")
+print(f"{x[-1]+1},{y[-1]+1}")

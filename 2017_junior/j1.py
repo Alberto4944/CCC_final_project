@@ -1,4 +1,4 @@
-# Completed on 6/2/2025 and tested with two cases. CCC Grader is still down.
+# Completed on 6/2/2025
 
 x = int(input())
 y = int(input())
