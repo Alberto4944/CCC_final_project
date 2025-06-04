@@ -1,11 +1,16 @@
+# Completed on 6/3/2025
+
 goal = int(input())
 infected = int(input())
 spread = int(input())
-day = 0
 
-while infected < goal:
+day = 0
+active = 0
+active = infected
+
+while infected <= goal:
+    active = active * spread
+    infected+=active
     day+=1
-    for i in range(infected):
-        infected = infected + spread**day
-        
+
 print(day)
