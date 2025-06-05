@@ -1,9 +1,26 @@
 instructions = input()
-letters = ""
-while len(instructions) > 0:
-    if instructions.find("+") > instructions.find("-") and instructions.find('-') > -1:
-        print(f"{instructions[:instructions.find("-")]} loosen {instructions[instructions.find("-") + 1]}")
-        instructions = instructions[instructions.find("-")+2:]
+
+    
+def action(loosen, tighten, instructions):
+    if loosen < tighten and loosen != -1:
+        print(f"{instructions[:loosen]} loosen {instructions[loosen + 1]}")
+        instructions = instructions[loosen+2:]
     else:
-        print(f"{instructions[:instructions.find("+")]} loosen {instructions[instructions.find("+") + 1]}")
-        instructions = instructions[instructions.find("+")+2:]
+        print(f"{instructions[:tighten]} tighten {instructions[tighten + 1]}")
+        instructions = instructions[tighten+2:]
+    return instructions
+        
+while len(instructions) > 0:
+    try:
+        loosen = instructions.index("-")
+    except:
+        print(f"{instructions[:-1]} loosen {instructions[-1]}")
+        instructions = instructions[loosen+2:]
+    
+    try:
+        tighten = instructions.index("+")
+    except:
+        print(f"{instructions[:-1]} tighten {instructions[-1]}")
+        instructions = instructions[tighten+2:]
+        
+    instructions = action(loosen,tighten,instructions)
