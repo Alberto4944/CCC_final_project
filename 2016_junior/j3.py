@@ -1,3 +1,5 @@
+# Completed on 3/6/2025
+
 word = input()
 longest = 0
 
