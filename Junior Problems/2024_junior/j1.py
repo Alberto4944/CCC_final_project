@@ -1,6 +1,6 @@
 # Completed on 6/11/2025
 
-ed = int(input())
+red = int(input())
 green = int(input())
 blue = int(input())
 
