@@ -9,8 +9,8 @@ country2.sort()
 def find_maximum(country1, country2):
     output1 = 0
     for i in range(people):
-        lowest1 = int(country2.pop(0))
-        highest2 = int(country1.pop(-1))
+        lowest1 = int(country1.pop(0))
+        highest2 = int(country2.pop(-1))
         output1+=max(lowest1,highest2)
         
         
