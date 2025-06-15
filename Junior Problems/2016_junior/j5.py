@@ -4,13 +4,13 @@ country1 = input().split()
 country2 = input().split()
 
 country1.sort()
-country2.sort()
+country2.sort(reverse=True)
 
 def find_maximum(country1, country2):
     output1 = 0
     for i in range(people):
         lowest1 = int(country1.pop(0))
-        highest2 = int(country2.pop(-1))
+        highest2 = int(country2.pop(0))
         output1+=max(lowest1,highest2)
         
         
