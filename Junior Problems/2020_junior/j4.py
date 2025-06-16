@@ -3,6 +3,7 @@
 text = input()
 string = input()
 
+# Does a shift
 def cyclic(text,string):
     new_text = text
     for shift in range(len(text)):

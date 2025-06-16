@@ -5,6 +5,7 @@ hold1 = 0
 hold2 = 0
 times = input()
 
+# Basically swaps everything
 for i in times:
     if i == "H":
         hold1 = grid[0]
